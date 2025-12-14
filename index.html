@@ -97,11 +97,10 @@
     <source src="sederhanamu-istimewamu.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="card" id="page1">
+  <div class="card" id="page1" onclick="startExperience()" style="cursor:pointer;">
     <h1>For Aanisah Sesmawati 🤍</h1>
-    <p style="font-size:13px; color:#888;">Made with sincere feelings</p>
-    <p>A little letter for your special day 💌</p>
-    <button class="btn" onclick="openLetter()">Open the Letter</button>
+    <p style="font-size:14px;">Tap anywhere to open your letter 💌</p>
+    <p style="font-size:12px; color:#999;">This song is for you ✨</p>
   </div>
 
   <div class="card hidden" id="page2">
@@ -152,11 +151,22 @@
   </div>
 
   <script>
-    function openLetter() {
-      const music = document.getElementById('bgMusic');
-      if (music) {
-        music.play().catch(() => {});
-      }
+    const music = document.getElementById("bgMusic");
+
+    function startExperience() {
+      music.volume = 0;
+      music.play();
+
+      let vol = 0;
+      const fade = setInterval(() => {
+        if (vol < 0.8) {
+          vol += 0.02;
+          music.volume = vol;
+        } else {
+          clearInterval(fade);
+        }
+      }, 120);
+
       document.getElementById('page1').classList.add('hidden');
       document.getElementById('page2').classList.remove('hidden');
     }
@@ -192,7 +202,7 @@
           document.body.appendChild(confetti);
 
           setTimeout(() => {
-            confetti.style.transform = 'translateY(100vh)';
+            confetti.style.transform = `translateY(100vh)`;
             confetti.style.opacity = '0';
           }, 50);
 
