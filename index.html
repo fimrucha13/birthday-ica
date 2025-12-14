@@ -93,7 +93,7 @@
   </style>
 </head>
 <body>
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="sederhanamu-istimewamu.mp3" type="audio/mpeg">
   </audio>
 
@@ -153,6 +153,10 @@
 
   <script>
     function openLetter() {
+      const music = document.getElementById('bgMusic');
+      if (music) {
+        music.play().catch(() => {});
+      }
       document.getElementById('page1').classList.add('hidden');
       document.getElementById('page2').classList.remove('hidden');
     }
