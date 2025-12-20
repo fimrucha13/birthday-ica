@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Ica ✨</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -18,6 +21,7 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
+
     .card {
       background: white;
       width: 90%;
@@ -28,9 +32,11 @@
       text-align: center;
       animation: fadeIn 1.2s ease;
     }
-    h1, h2, h3 {
+
+    h1, h2 {
       font-family: 'Playfair Display', serif;
     }
+
     .btn {
       margin-top: 24px;
       padding: 12px 22px;
@@ -42,27 +48,49 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    .btn:hover { transform: scale(1.05); }
-    .hidden { display: none; }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      margin-top: 18px;
+      background: none;
+      border: none;
+      color: #ff7aa2;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     .letter {
       text-align: left;
       font-size: 14px;
       line-height: 1.7;
       animation: slideUp 1s ease;
     }
+
     .dinner-card {
       margin-top: 20px;
       padding: 16px;
       border-radius: 16px;
       background: #fff7fb;
-      animation: fadeIn 1s ease;
     }
+
     .places {
       display: grid;
       grid-template-columns: 1fr;
       gap: 12px;
       margin-top: 12px;
     }
+
     .place {
       border-radius: 14px;
       overflow: hidden;
@@ -70,33 +98,43 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
-    .place:hover { transform: scale(1.03); }
+
+    .place:hover {
+      transform: scale(1.03);
+    }
+
     .place img {
       width: 100%;
-      height: 120px;
+      height: 140px;
       object-fit: cover;
     }
+
     .place p {
       margin: 0;
       padding: 8px;
       background: white;
       font-weight: 500;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
+
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
+
   <audio id="bgMusic" loop>
     <source src="sederhanamu-istimewamu.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- PAGE 1 -->
   <div class="card" id="page1">
     <h1>For Aanisah Sesmawati 🤍</h1>
     <p style="font-size:13px; color:#888;">Made with sincere feelings</p>
@@ -104,103 +142,146 @@
     <button class="btn" onclick="openLetter()">Open the Letter</button>
   </div>
 
+  <!-- PAGE 2 -->
   <div class="card hidden" id="page2">
     <h2>Happy 23rd Birthday 🤍</h2>
-    <div class="letter">
-      <p>
-        Selamat ulang tahun yaa <b>wanita kuat</b> 💐✨<br><br>
-        Terima kasih sudah bertahan dan melangkah sejauh ini.
-        23 tahun mungkin bukan perjalanan yang selalu mudah,
-        tapi Icaa berhasil melewatinya dengan cara yang luar biasa 🤍<br><br>
-        Di tahun-tahun yang akan datang masih ada rintangan-rintangan yang akan Icaa lewati,
-        tapi Abang yakin Icaa pasti bisa kok melewatinya satu per satu, apapun rintangannya 🌷<br><br>
-        Semoga di tahun-tahun mendatang, hal-hal yang Icaa impikan
-        mulai tercapai perlahan, satu per satu,
-        dengan cara terbaik menurut Allah 🤲✨<br><br>
-        Semoga Icaa selalu diberikan kesehatan,
-        dikuatkan hatinya, dan dipeluk oleh hal-hal baik dalam hidup ini 🤍<br><br>
-        Dan ingat yaa… Icaa itu tidak sendiri.
-        <i>You don’t have to face everything alone</i>.
-        You can share everything with me,
-        dan kalau Icaa berkenan,
-        Abang dengan senang hati akan menemani setiap langkahnya hehe 🤍✨
-      </p>
-    </div>
-    <button class="btn" onclick="openDinner()">Next 💌</button>
+   <div class="letter">
+  <p>
+    Selamat ulang tahun yaa <b>wanita kuat</b> 💐✨<br><br>
+
+    Terima kasih sudah bertahan dan melangkah sejauh ini.
+    23 tahun mungkin bukan perjalanan yang selalu mudah,
+    tapi Icaa berhasil melewatinya dengan cara yang luar biasa 🤍<br><br>
+
+    Di tahun-tahun yang akan datang masih ada rintangan-rintangan
+    yang akan Icaa lewati,
+    tapi Abang yakin Icaa pasti bisa kok melewatinya satu per satu,
+    apapun rintangannya 🌷<br><br>
+
+    Semoga di tahun-tahun mendatang,
+    hal-hal yang Icaa impikan mulai tercapai perlahan,
+    satu per satu,
+    dengan cara terbaik menurut Allah 🤲✨<br><br>
+
+    Semoga Icaa selalu diberikan kesehatan,
+    dikuatkan hatinya,
+    dan dipeluk oleh hal-hal baik dalam hidup ini 🤍<br><br>
+
+    Dan ingat yaa…
+    Icaa itu tidak sendiri.
+    <i>You don’t have to face everything alone.</i>
+    You can share everything with me,
+    dan kalau Icaa berkenan,
+    Abang dengan senang hati akan menemani setiap langkahnya hehe 🤍✨
+  </p>
+</div>
+
+
+    <button class="btn" onclick="openDinner()">Next 💌</button><br>
+    <button class="back-btn" onclick="goBack('page2','page1')">← Back</button>
   </div>
 
+  <!-- PAGE 3 -->
   <div class="card hidden" id="page3">
     <h2>Dinner Invitation 🍽️</h2>
+
     <div class="dinner-card">
       <p><b>30 December 2025</b><br>20.00 WIB</p>
       <p>Would you like to have dinner with me? ✨</p>
-      <div class="places" id="places">
-        <div class="place" onclick="choosePlace('Sushi Tei')">
-          <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022" />
-          <p>Sushi Tei</p>
-        </div>
-        <div class="place" onclick="choosePlace('Local Pantry')">
-          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" />
-          <p>Local Pantry</p>
-        </div>
-        <div class="place" onclick="choosePlace('La Fusion')">
-          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" />
+
+      <div class="places">
+
+        <div class="place" onclick="choosePlace()">
+          <img src="img/la-fusion.jpeg" alt="La Fusion">
           <p>La Fusion</p>
         </div>
+
+        <div class="place" onclick="choosePlace()">
+          <img src="img/local-pantry.jpeg" alt="Local Pantry">
+          <p>Local Pantry</p>
+        </div>
+
+        <div class="place" onclick="choosePlace()">
+          <img src="img/sushi-tei.jpeg" alt="Sushi Tei">
+          <p>Sushi Tei</p>
+        </div>
+
       </div>
     </div>
+
+    <button class="back-btn" onclick="goBack('page3','page2')">← Back</button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="card hidden" id="page4">
+    <h2>Dress Code 🖤🤍</h2>
+
+    <img src="img/dresscode-bw.png"
+         alt="Black and White Dress Code"
+         style="width:160px; margin:20px 0;">
+
+    <p style="font-size:14px; line-height:1.6;">
+      Black & White Outfit ✨<br>
+      Simple, elegant, and special.<br>
+      Just like this night, just like you 🤍
+    </p>
+
+    <button class="back-btn" onclick="goBack('page4','page3')">← Back</button>
   </div>
 
   <script>
     function openLetter() {
       const music = document.getElementById('bgMusic');
-      if (music) {
-        music.play().catch(() => {});
-      }
-      document.getElementById('page1').classList.add('hidden');
-      document.getElementById('page2').classList.remove('hidden');
+      if (music) music.play().catch(() => {});
+      page1.classList.add('hidden');
+      page2.classList.remove('hidden');
     }
 
     function openDinner() {
-      document.getElementById('page2').classList.add('hidden');
-      document.getElementById('page3').classList.remove('hidden');
+      page2.classList.add('hidden');
+      page3.classList.remove('hidden');
     }
 
-    function choosePlace(place) {
-      const places = document.getElementById('places');
-      places.innerHTML = `<h3>See you at ${place} 🤍✨</h3><p>I can't wait 🌷</p>`;
+    function choosePlace() {
+      page3.classList.add('hidden');
+      page4.classList.remove('hidden');
       launchConfetti();
     }
 
+    function goBack(from, to) {
+      document.getElementById(from).classList.add('hidden');
+      document.getElementById(to).classList.remove('hidden');
+    }
+
     function launchConfetti() {
-      const duration = 1500;
-      const end = Date.now() + duration;
+      const end = Date.now() + 1500;
       (function frame() {
-        const colors = ['#ff7aa2', '#ffb6c1', '#ffd1dc'];
+        const colors = ['#ff7aa2', '#ffd1dc', '#ffb6c1'];
         for (let i = 0; i < 3; i++) {
-          const confetti = document.createElement('div');
-          confetti.style.position = 'fixed';
-          confetti.style.top = '-10px';
-          confetti.style.left = Math.random() * 100 + 'vw';
-          confetti.style.width = '8px';
-          confetti.style.height = '8px';
-          confetti.style.borderRadius = '50%';
-          confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-          confetti.style.opacity = '0.8';
-          confetti.style.zIndex = '9999';
-          confetti.style.transition = 'transform 1.5s linear, opacity 1.5s';
-          document.body.appendChild(confetti);
+          const c = document.createElement('div');
+          c.style.position = 'fixed';
+          c.style.top = '-10px';
+          c.style.left = Math.random() * 100 + 'vw';
+          c.style.width = '8px';
+          c.style.height = '8px';
+          c.style.borderRadius = '50%';
+          c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          c.style.opacity = '0.8';
+          c.style.zIndex = '9999';
+          c.style.transition = 'transform 1.5s linear, opacity 1.5s';
+          document.body.appendChild(c);
 
           setTimeout(() => {
-            confetti.style.transform = 'translateY(100vh)';
-            confetti.style.opacity = '0';
+            c.style.transform = 'translateY(100vh)';
+            c.style.opacity = '0';
           }, 50);
 
-          setTimeout(() => confetti.remove(), 1600);
+          setTimeout(() => c.remove(), 1600);
         }
         if (Date.now() < end) requestAnimationFrame(frame);
       })();
     }
   </script>
+
 </body>
 </html>
