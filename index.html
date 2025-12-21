@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
 }
 
-/* CARD */
+/* CARD + TRANSITION */
 .card {
   background: white;
   width: 90%;
@@ -42,9 +42,7 @@ body {
   transform: translateY(0);
 }
 
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
@@ -130,21 +128,35 @@ h1, h2 {
 <!-- PAGE 2 -->
 <div class="card hidden" id="page2">
   <h2>Happy 23rd Birthday 🤍</h2>
+
   <div class="letter">
     <p>
       Selamat ulang tahun yaa <b>wanita kuat</b> 💐✨<br><br>
+
       Terima kasih sudah bertahan dan melangkah sejauh ini.
       23 tahun mungkin bukan perjalanan yang selalu mudah,
       tapi Icaa berhasil melewatinya dengan cara yang luar biasa 🤍<br><br>
+
       Di tahun-tahun yang akan datang masih ada rintangan-rintangan
       yang akan Icaa lewati,
       tapi Abang yakin Icaa pasti bisa kok melewatinya satu per satu,
       apapun rintangannya 🌷<br><br>
-      Semoga hal-hal yang Icaa impikan mulai tercapai perlahan,
+
+      Semoga di tahun-tahun mendatang,
+      hal-hal yang Icaa impikan mulai tercapai perlahan,
       satu per satu,
       dengan cara terbaik menurut Allah 🤲✨<br><br>
+
+      Semoga Icaa selalu diberikan kesehatan,
+      dikuatkan hatinya,
+      dan dipeluk oleh hal-hal baik dalam hidup ini 🤍<br><br>
+
       Dan ingat yaa…
-      Icaa itu tidak sendiri 🤍
+      Icaa tidak sendiri.
+      <i>You don’t have to face everything alone.</i>
+      You can share everything with me,
+      dan kalau Icaa berkenan,
+      Abang dengan senang hati akan menemani setiap langkahnya hehe 🤍✨
     </p>
   </div>
 
@@ -162,13 +174,18 @@ h1, h2 {
 
     <div class="places">
       <div class="place" onclick="goToPage(page3, page4)">
-        <img src="img/la-fusion.jpeg"><p>La Fusion</p>
+        <img src="img/la-fusion.jpeg">
+        <p>La Fusion</p>
       </div>
+
       <div class="place" onclick="goToPage(page3, page4)">
-        <img src="img/local-pantry.jpeg"><p>Local Pantry</p>
+        <img src="img/local-pantry.jpeg">
+        <p>Local Pantry</p>
       </div>
+
       <div class="place" onclick="goToPage(page3, page4)">
-        <img src="img/sushi-tei.jpeg"><p>Sushi Tei</p>
+        <img src="img/sushi-tei.jpeg">
+        <p>Sushi Tei</p>
       </div>
     </div>
   </div>
@@ -178,17 +195,20 @@ h1, h2 {
 
 <!-- PAGE 4 -->
 <div class="card hidden" id="page4">
-  <p>
+  <p style="font-size:14px; line-height:1.6;">
     See you at <b>20.00, 30 December</b><br>
     And I’ll pick you up 🤍
   </p>
 
   <img src="img/dresscode-bw.png" style="width:160px; margin:16px 0;">
 
-  <h2>Dress Code </h2>
+  <h2>Dress Code 🖤🤍</h2>
 
-  <p>Black & White Outfit ✨<br>Simple, elegant, and special.
-    Just like the night,just like you.
+  <p style="font-size:14px; line-height:1.6;">
+    Black & White Outfit ✨<br>
+    Simple, elegant, and special.
+    Just like the night,
+    just like you.
   </p>
 
   <p style="margin-top:18px;">I can’t wait to see you ✨</p>
@@ -198,9 +218,15 @@ h1, h2 {
 
 <script>
 const bgMusic = document.getElementById('bgMusic');
+let musicStarted = false;
 
 function goToPage(from, to) {
-  if (!bgMusic.paused) bgMusic.play().catch(()=>{});
+
+  // start music once
+  if (!musicStarted) {
+    bgMusic.play().catch(()=>{});
+    musicStarted = true;
+  }
 
   from.classList.remove('active');
 
@@ -211,6 +237,7 @@ function goToPage(from, to) {
     setTimeout(() => {
       to.classList.add('active');
     }, 50);
+
   }, 400);
 }
 </script>
