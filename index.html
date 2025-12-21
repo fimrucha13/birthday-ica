@@ -1,127 +1,116 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Ica ✨</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Ica ✨</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe6ee, #fffafc);
-      color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe6ee, #fffafc);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-    .card {
-      background: white;
-      width: 90%;
-      max-width: 420px;
-      padding: 32px 24px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(255,122,162,0.25);
-      text-align: center;
-    }
+/* CARD */
+.card {
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  padding: 32px 24px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(255,122,162,0.25);
+  text-align: center;
 
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-    }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-    .btn {
-      margin-top: 24px;
-      padding: 12px 22px;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #ff7aa2, #ff9fbf);
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .btn:hover { transform: scale(1.05); }
+.hidden {
+  display: none;
+}
 
-    .back-btn {
-      margin-top: 18px;
-      background: none;
-      border: none;
-      color: #ff7aa2;
-      font-size: 13px;
-      cursor: pointer;
-    }
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
 
-    .back-btn:hover { text-decoration: underline; }
+.btn {
+  margin-top: 24px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff7aa2, #ff9fbf);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-    .hidden { display: none; }
+.back-btn {
+  margin-top: 18px;
+  background: none;
+  border: none;
+  color: #ff7aa2;
+  font-size: 13px;
+  cursor: pointer;
+}
 
-    .letter {
-      text-align: left;
-      font-size: 14px;
-      line-height: 1.7;
-    }
+.letter {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
+}
 
-    .dinner-card {
-      margin-top: 20px;
-      padding: 16px;
-      border-radius: 16px;
-      background: #fff7fb;
-    }
+.dinner-card {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff7fb;
+}
 
-    .places {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 12px;
-    }
+.places {
+  display: grid;
+  gap: 12px;
+}
 
-    .place {
-      border-radius: 14px;
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+.place {
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
 
-    .place:hover { transform: scale(1.03); }
+.place:hover { transform: scale(1.03); }
 
-    .place img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
+.place img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
 
-    .place p {
-      margin: 0;
-      padding: 8px;
-      background: white;
-      font-weight: 500;
-    }
-
-    /* Animasi halus Dress Code */
-    .fade-slide {
-      animation: fadeSlideUp 1.2s ease forwards;
-    }
-
-    @keyframes fadeSlideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+.place p {
+  margin: 0;
+  padding: 8px;
+  background: white;
+  font-weight: 500;
+}
+</style>
 </head>
 
 <body>
@@ -131,11 +120,11 @@
 </audio>
 
 <!-- PAGE 1 -->
-<div class="card" id="page1">
+<div class="card active" id="page1">
   <h1>For Aanisah Sesmawati 🤍</h1>
   <p style="font-size:13px; color:#888;">Made with sincere feelings</p>
   <p>A little letter for your special day 💌</p>
-  <button class="btn" onclick="openLetter()">Open the Letter</button>
+  <button class="btn" onclick="goToPage(page1, page2)">Open the Letter</button>
 </div>
 
 <!-- PAGE 2 -->
@@ -144,36 +133,23 @@
   <div class="letter">
     <p>
       Selamat ulang tahun yaa <b>wanita kuat</b> 💐✨<br><br>
-
       Terima kasih sudah bertahan dan melangkah sejauh ini.
       23 tahun mungkin bukan perjalanan yang selalu mudah,
       tapi Icaa berhasil melewatinya dengan cara yang luar biasa 🤍<br><br>
-
       Di tahun-tahun yang akan datang masih ada rintangan-rintangan
       yang akan Icaa lewati,
       tapi Abang yakin Icaa pasti bisa kok melewatinya satu per satu,
       apapun rintangannya 🌷<br><br>
-
-      Semoga di tahun-tahun mendatang,
-      hal-hal yang Icaa impikan mulai tercapai perlahan,
+      Semoga hal-hal yang Icaa impikan mulai tercapai perlahan,
       satu per satu,
       dengan cara terbaik menurut Allah 🤲✨<br><br>
-
-      Semoga Icaa selalu diberikan kesehatan,
-      dikuatkan hatinya,
-      dan dipeluk oleh hal-hal baik dalam hidup ini 🤍<br><br>
-
       Dan ingat yaa…
-      Icaa itu tidak sendiri.
-      <i>You don’t have to face everything alone.</i>
-      You can share everything with me,
-      dan kalau Icaa berkenan,
-      Abang dengan senang hati akan menemani setiap langkahnya hehe 🤍✨
+      Icaa itu tidak sendiri 🤍
     </p>
   </div>
 
-  <button class="btn" onclick="openDinner()">Next 💌</button><br>
-  <button class="back-btn" onclick="goBack('page2','page1')">← Back</button>
+  <button class="btn" onclick="goToPage(page2, page3)">Next 💌</button><br>
+  <button class="back-btn" onclick="goToPage(page2, page1)">← Back</button>
 </div>
 
 <!-- PAGE 3 -->
@@ -185,105 +161,58 @@
     <p>Would you like to have dinner with me? ✨</p>
 
     <div class="places">
-      <div class="place" onclick="choosePlace()">
-        <img src="img/la-fusion.jpeg">
-        <p>La Fusion</p>
+      <div class="place" onclick="goToPage(page3, page4)">
+        <img src="img/la-fusion.jpeg"><p>La Fusion</p>
       </div>
-
-      <div class="place" onclick="choosePlace()">
-        <img src="img/local-pantry.jpeg">
-        <p>Local Pantry</p>
+      <div class="place" onclick="goToPage(page3, page4)">
+        <img src="img/local-pantry.jpeg"><p>Local Pantry</p>
       </div>
-
-      <div class="place" onclick="choosePlace()">
-        <img src="img/sushi-tei.jpeg">
-        <p>Sushi Tei</p>
+      <div class="place" onclick="goToPage(page3, page4)">
+        <img src="img/sushi-tei.jpeg"><p>Sushi Tei</p>
       </div>
     </div>
   </div>
 
-  <button class="back-btn" onclick="goBack('page3','page2')">← Back</button>
+  <button class="back-btn" onclick="goToPage(page3, page2)">← Back</button>
 </div>
 
-<!-- PAGE 4 (Dress Code) -->
-<div class="card hidden fade-slide" id="page4">
-
-  <p style="font-size:14px; line-height:1.6; margin-bottom:18px;">
+<!-- PAGE 4 -->
+<div class="card hidden" id="page4">
+  <p>
     See you at <b>20.00, 30 December</b><br>
     And I’ll pick you up 🤍
   </p>
 
-  <img src="img/dresscode-bw.png" style="width:160px; margin:10px 0 14px 0;">
+  <img src="img/dresscode-bw.png" style="width:160px; margin:16px 0;">
 
-  <h2 style="margin:8px 0 14px 0;">Dress Code 🖤🤍</h2>
+  <h2>Dress Code </h2>
 
-  <p style="font-size:14px; line-height:1.6;">
-    Black & White Outfit ✨<br>
-    Simple, elegant, and special.
-    Just like this night, just like you 🤍
+  <p>Black & White Outfit ✨<br>Simple, elegant, and special.
+    Just like the night,just like you.
   </p>
 
-  <p style="margin-top:18px; font-size:14px;">
-    I can’t wait to see you ✨
-  </p>
+  <p style="margin-top:18px;">I can’t wait to see you ✨</p>
 
-  <button class="back-btn" onclick="goBack('page4','page3')">← Back</button>
+  <button class="back-btn" onclick="goToPage(page4, page3)">← Back</button>
 </div>
 
 <script>
-  function openLetter() {
-    bgMusic.play().catch(()=>{});
-    page1.classList.add('hidden');
-    page2.classList.remove('hidden');
-  }
+const bgMusic = document.getElementById('bgMusic');
 
-  function openDinner() {
-    page2.classList.add('hidden');
-    page3.classList.remove('hidden');
-  }
+function goToPage(from, to) {
+  if (!bgMusic.paused) bgMusic.play().catch(()=>{});
 
-  function choosePlace() {
-    page3.classList.add('hidden');
-    page4.classList.remove('hidden');
-    page4.classList.remove('fade-slide');
-    void page4.offsetWidth;
-    page4.classList.add('fade-slide');
-    launchConfetti();
-  }
+  from.classList.remove('active');
 
-  function goBack(from, to) {
-    document.getElementById(from).classList.add('hidden');
-    document.getElementById(to).classList.remove('hidden');
-  }
+  setTimeout(() => {
+    from.classList.add('hidden');
+    to.classList.remove('hidden');
 
-  function launchConfetti() {
-    const end = Date.now() + 1500;
-    (function frame() {
-      const colors = ['#ff7aa2', '#ffd1dc', '#ffb6c1'];
-      for (let i = 0; i < 3; i++) {
-        const c = document.createElement('div');
-        c.style.position = 'fixed';
-        c.style.top = '-10px';
-        c.style.left = Math.random() * 100 + 'vw';
-        c.style.width = '8px';
-        c.style.height = '8px';
-        c.style.borderRadius = '50%';
-        c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        c.style.opacity = '0.8';
-        c.style.zIndex = '9999';
-        c.style.transition = 'transform 1.5s linear, opacity 1.5s';
-        document.body.appendChild(c);
-
-        setTimeout(() => {
-          c.style.transform = 'translateY(100vh)';
-          c.style.opacity = '0';
-        }, 50);
-
-        setTimeout(() => c.remove(), 1600);
-      }
-      if (Date.now() < end) requestAnimationFrame(frame);
-    })();
-  }
+    setTimeout(() => {
+      to.classList.add('active');
+    }, 50);
+  }, 400);
+}
 </script>
 
 </body>
